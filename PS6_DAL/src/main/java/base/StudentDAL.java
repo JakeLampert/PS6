@@ -2,7 +2,6 @@ package base;
 
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
@@ -104,7 +103,7 @@ public class StudentDAL  {
 		try {
 			tx = session.beginTransaction();	
 									
-			StudentDomainModel stu = (StudentDomainModel) session.get(StudentDomainModel.class, stuID);
+			StudentDomainModel stu = session.get(StudentDomainModel.class, stuID);
 			session.delete(stu);
 		
 			
